@@ -1,0 +1,39 @@
+@use "../Shared.scss";
+
+.kasa-footer {
+	background-color: black;
+
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	min-height: 209px;
+	max-height: 209px;
+	position: absolute;
+
+
+
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	img {
+		width: 122px;
+		height: 40px;
+	}
+
+	p {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 12px;
+
+		@media only screen and (min-width: 600px) {
+			font-size: 24px;
+		}
+
+		padding-top: 30px;
+		color: white;
+	}
+}

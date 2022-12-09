@@ -1,0 +1,64 @@
+@use "../Shared.scss";
+
+.kasa-header {
+	background-color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+
+
+	.logo {
+		background-image: url("Logo.svg");
+		background-size: contain;
+
+		height: 47px;
+		width: 145px;
+
+		@media only screen and (min-width: 600px) {
+			height: 68px;
+			width: 210px;
+		}
+	}
+
+
+	nav {
+		display: flex;
+		align-items: center;
+
+		ul {
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+
+			li {
+				margin-left: 20px;
+
+				@media only screen and (min-width: 600px) {
+
+					margin-left: 57px;
+				}
+
+				a {
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 500;
+					font-size: 12px;
+					
+					color: #FF6060;
+					text-decoration: none;
+
+					@media only screen and (min-width: 600px) {
+						font-size: 24px;
+
+					}
+				}
+
+				.selected {
+					text-decoration: underline;
+				}
+
+
+			}
+		}
+	}
+}
