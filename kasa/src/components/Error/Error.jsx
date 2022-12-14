@@ -3,8 +3,7 @@ import "./Error.scss";
 
 export default function Error() {
   const error = useRouteError();
-  console.error(error);
-
+  
   return (
     <div className="error-page">
       <h1>{error.status}</h1>

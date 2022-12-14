@@ -1,0 +1,67 @@
+@use "../Shared.scss";
+
+.banner {
+	transition: all 0.3s ease-in-out;
+
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	border-radius: 10px;
+	z-index: -1;
+
+	
+	&:before {
+		z-index: -1;
+		border-radius: 10px;
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.3);
+	}
+
+	h1 {
+		font-family: "Montserrat", sans-serif;
+		margin-left: 16px;
+		font-size: 24px;
+		font-weight: 400;
+
+		@media only screen and (min-width: 600px) {
+			font-size: 48px;
+			text-align: center;
+			margin-left: 0;
+		}
+
+		color: white;
+		display: flex;
+
+		justify-content: center;
+		flex-direction: column;
+		height: 100%;
+	}
+
+}
+
+.bg-home {
+	height: 111px;
+	background-image: url("./home-mobile.png");
+
+	@media only screen and (min-width: 600px) {
+		background-image: url("./home-desktop.png");
+		height: 223px;
+	}
+
+}
+
+.bg-about {
+	height: 223px;
+	background-image: url("./about-mobile.png");
+
+	@media only screen and (min-width: 600px) {
+		background-image: url("./about-desktop.png");
+	}
+	
+}

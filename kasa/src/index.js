@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import "./global.scss"; // Import all SCSS not used by Components and then used by the global project
+import "./global.scss"; // Import SCSS used by the global project (for all pages)
 
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
