@@ -55,7 +55,7 @@
 
 }
 
-.bg-home {
+.home {
 
 	height: 111px;
 	background-image: url("./home-mobile.png");
@@ -65,14 +65,32 @@
 		height: 223px;
 	}
 
+	margin-top: 22px;
+	margin-bottom: 22px;
+
+	@media only screen and (min-width: 600px) {
+		margin-top: 63px;
+		margin-bottom: 43px;
+	}
+
 }
 
-.bg-about {
+.about {
 	height: 223px;
 	background-image: url("./about-mobile.png");
 
 	@include for-not-mobile {
 		background-image: url("./about-desktop.png");
 	}
+
+
+	margin-top: 22px;
+	margin-bottom: 22px;
+
+	@include for-not-mobile { 
+		margin-top: 63px;
+		margin-bottom: 31px;
+	}
+
 
 }

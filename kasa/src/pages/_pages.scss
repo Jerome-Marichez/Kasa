@@ -1,13 +1,7 @@
 @use "../utils/_mixin.scss" as *;
 
 /* GLOBAL PAGE STYLES */
-.margin-before-footer {
-	margin-bottom: 200px;
 
-	@media only screen and (min-width: 600px) {
-		margin-bottom: 100px;
-	}
-}
 
 .container-margin {
 	@media only screen and (min-width: 600px) {
@@ -16,27 +10,6 @@
 	}
 }
 
-/* END GLOBAL PAGE STYLE */
-
-/* HOME PAGE STYLES */
-.margin-home-top {
-	margin-top: 22px;
-
-	@media only screen and (min-width: 600px) {
-		margin-top: 63px;
-	}
-}
-
-.margin-home-bottom {
-	margin-bottom: 22px;
-
-	@media only screen and (min-width: 600px) {
-		margin-bottom: 43px;
-	}
-
-}
-
-
 .container-thumbs {
 	@media only screen and (min-width: 600px) {
 		background: #F7F7F7;
@@ -44,26 +17,5 @@
 		min-height: 150px;
 	}
 }
-
-/* END HOME PAGE STYLES */
-
-/* ABOUT PAGE STYLES */
-.margin-about-top {
-	margin-top: 22px;
-
-	@media only screen and (min-width: 600px) {
-		margin-top: 63px;
-	}
-}
-
-.margin-about-bottom {
-	margin-bottom: 22px;
-
-	@media only screen and (min-width: 600px) {
-		margin-bottom: 31px;
-	}
-
-}
-
 
 /* END ABOUT PAGES */

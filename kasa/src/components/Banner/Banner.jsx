@@ -6,7 +6,7 @@ export default function Banner({ title }) {
 	let { pathname } = useLocation();
 	let classPicture = "bg-home"; // By default show background bg-home
 
-	pathname.includes("about") ? classPicture = "bg-about" : classPicture = "bg-home";
+	pathname.includes("about") ? classPicture = "about" : classPicture = "home";
 	
 	return (
 		<div className={`banner ${classPicture}`}>
