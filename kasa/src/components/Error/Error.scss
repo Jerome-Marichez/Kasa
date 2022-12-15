@@ -1,4 +1,4 @@
-@use "../Shared.scss";
+@use "../../utils/_mixin.scss" as *;
 
 .error-page {
 	display: flex;
@@ -19,7 +19,7 @@
 	h1 {
 		font-size: 96px;
 
-		@media only screen and (min-width: 600px) {
+		@include for-not-mobile {
 			font-size: 288px;
 		}
 	}
@@ -29,7 +29,7 @@
 		padding-bottom: 10%;
 		text-align: center;
 
-		@media only screen and (min-width: 600px) {
+		@include for-not-mobile {
 			font-size: 36px;
 		}
 
@@ -42,11 +42,13 @@
 
 	a {
 		font-size: 14px;
-		@media only screen and (min-width: 600px) {
+
+		@include for-not-mobile {
 			font-size: 18px;
 		}
+
 		color: #FF6060;
-		
+
 	}
 
 }

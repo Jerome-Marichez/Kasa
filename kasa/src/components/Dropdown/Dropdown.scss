@@ -1,0 +1,81 @@
+@use "../../utils/_mixin.scss" as *;
+
+
+.dropdown {
+
+
+	width: 100%;
+	margin-bottom: 20px;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background-color: #FF6060;
+		border-radius: 5px;
+
+		height: 30px;
+
+		@include for-not-mobile {
+			height: 47px;
+		}
+
+		.title {
+			font-family: 'Montserrat', sans-serif;
+			color: white;
+			margin-left: 15px;
+			font-weight: 500;
+			font-size: 13px;
+
+			@include for-not-mobile {
+				font-size: 24px;
+			}
+		}
+
+		.arrow {
+			cursor: pointer;
+
+			color: white;
+			margin-right: 15px;
+			content: url(Vector.svg);
+
+			width: 13px;
+
+			@include for-not-mobile {
+				width: 20px;
+
+			}
+
+
+
+		}
+
+	}
+
+	.texte {
+		display: none;
+		padding: 15px;
+		border-radius: 5px;
+		background-color: #F6F6F6;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+
+		color: #FF6060;
+
+		@include for-not-mobile {
+
+			font-size: 18px;
+		}
+	}
+
+	.show {
+		display: block;
+	}
+
+
+	.rotate {
+		transform: rotate(180deg);
+	}
+
+}

@@ -3,11 +3,9 @@ import logo from './Logo.svg';
 
 export default function Footer() {
 	return (
-		<footer className="kasa-footer">
+		<footer className="footer">
 			<img src={logo} alt="logo"></img>
 			<p>© 2020 Kasa. All rights reserved</p>
-
-
 		</footer>
 	);
 }

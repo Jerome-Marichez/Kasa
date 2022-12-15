@@ -1,13 +1,18 @@
-// Import SCSS used by the global project (for all pages)
+// This file is the SCSS used by the global project 
+
+@use "./utils/_mixin.scss"; // import mixin
+
 html,
 * {
 	@import url('https://fonts.cdnfonts.com/css/montserrat');
-	
+
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	transition: all 0.3s;
 }
+
+
 
 body {
 

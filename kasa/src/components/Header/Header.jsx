@@ -1,6 +1,5 @@
 import "./Header.scss";
-import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 export default function Header() {
@@ -8,7 +7,7 @@ export default function Header() {
 	const selectedClassName = "selected";
 
 	return (
-		<header className="kasa-header">
+		<header className="header">
 			<div className="logo">
 
 			</div>

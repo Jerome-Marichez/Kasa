@@ -1,6 +1,6 @@
-@use "../Shared.scss";
+@use "../../utils/_mixin.scss" as *;
 
-.kasa-header {
+.header {
 	background-color: white;
 	display: flex;
 	flex-direction: row;
@@ -15,7 +15,7 @@
 		height: 47px;
 		width: 145px;
 
-		@media only screen and (min-width: 600px) {
+		@include for-not-mobile {
 			height: 68px;
 			width: 210px;
 		}
@@ -34,8 +34,7 @@
 			li {
 				margin-left: 20px;
 
-				@media only screen and (min-width: 600px) {
-
+				@include for-not-mobile {
 					margin-left: 57px;
 				}
 
@@ -43,11 +42,11 @@
 					font-family: 'Montserrat', sans-serif;
 					font-weight: 500;
 					font-size: 12px;
-					
+
 					color: #FF6060;
 					text-decoration: none;
 
-					@media only screen and (min-width: 600px) {
+					@include for-not-mobile {
 						font-size: 24px;
 
 					}
