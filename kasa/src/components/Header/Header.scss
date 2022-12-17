@@ -15,7 +15,7 @@
 		height: 47px;
 		width: 145px;
 
-		@include for-not-mobile {
+		@include for-desktop {
 			height: 68px;
 			width: 210px;
 		}
@@ -34,7 +34,7 @@
 			li {
 				margin-left: 20px;
 
-				@include for-not-mobile {
+				@include for-desktop {
 					margin-left: 57px;
 				}
 
@@ -46,7 +46,7 @@
 					color: #FF6060;
 					text-decoration: none;
 
-					@include for-not-mobile {
+					@include for-desktop {
 						font-size: 24px;
 
 					}

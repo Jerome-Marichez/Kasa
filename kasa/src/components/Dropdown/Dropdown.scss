@@ -16,7 +16,7 @@
 
 		height: 30px;
 
-		@include for-not-mobile {
+		@include for-desktop {
 			height: 47px;
 		}
 
@@ -27,7 +27,7 @@
 			font-weight: 500;
 			font-size: 13px;
 
-			@include for-not-mobile {
+			@include for-desktop {
 				font-size: 24px;
 			}
 		}
@@ -41,7 +41,7 @@
 
 			width: 13px;
 
-			@include for-not-mobile {
+			@include for-desktop {
 				width: 20px;
 
 			}
@@ -63,7 +63,7 @@
 
 		color: #FF6060;
 
-		@include for-not-mobile {
+		@include for-desktop {
 
 			font-size: 18px;
 		}

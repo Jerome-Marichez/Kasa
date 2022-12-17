@@ -4,8 +4,7 @@ import "./Dropdown.scss";
 export default function Dropdown({ title, texte }) {
 
 	const [isOpen, setOpen] = useState(0);
-	console.log(isOpen);
-
+	
 	return (
 		<div className="dropdown">
 			<div className="header">

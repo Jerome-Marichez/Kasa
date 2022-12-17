@@ -9,7 +9,7 @@
 	position: relative;
 	border-radius: 10px;
 
-	@include for-not-mobile {
+	@include for-desktop {
 		border-radius: 25px;
 	}
 
@@ -20,7 +20,7 @@
 		z-index: -1;
 		border-radius: 10px;
 
-		@include for-not-mobile {
+		@include for-desktop {
 			border-radius: 25px;
 		}
 
@@ -39,7 +39,7 @@
 		font-size: 24px;
 		font-weight: 400;
 
-		@include for-not-mobile {
+		@include for-desktop {
 			font-size: 48px;
 			text-align: center;
 			margin-left: 0;
@@ -60,7 +60,7 @@
 	height: 111px;
 	background-image: url("./home-mobile.png");
 
-	@include for-not-mobile {
+	@include for-desktop {
 		background-image: url("./home-desktop.png");
 		height: 223px;
 	}
@@ -79,7 +79,7 @@
 	height: 223px;
 	background-image: url("./about-mobile.png");
 
-	@include for-not-mobile {
+	@include for-desktop {
 		background-image: url("./about-desktop.png");
 	}
 
@@ -87,7 +87,7 @@
 	margin-top: 22px;
 	margin-bottom: 22px;
 
-	@include for-not-mobile { 
+	@include for-desktop { 
 		margin-top: 63px;
 		margin-bottom: 31px;
 	}

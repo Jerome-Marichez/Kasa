@@ -1,5 +1,10 @@
-@mixin for-not-mobile {
+@mixin for-desktop {
 	@media (min-width: 599px) and (min-height: 500px) {
+		@content;
+	}
+}
+@mixin for-desktop-largescreen {
+	@media (min-width: 1200px)  {
 		@content;
 	}
 }

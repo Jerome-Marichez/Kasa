@@ -12,7 +12,7 @@
 
 	margin-top: 200px;
 
-	@include for-not-mobile {
+	@include for-desktop {
 		margin-top: 100px;
 	}
 
@@ -31,7 +31,7 @@
 		font-family: 'Montserrat', sans-serif;
 		font-size: 12px;
 
-		@include for-not-mobile {
+		@include for-desktop {
 			font-size: 24px;
 		}
 
