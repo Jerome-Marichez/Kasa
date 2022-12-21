@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom/client';
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ErrorPage } from "./pages/ErrorPage";
+import { LogementPage } from "./pages/LogementPage";
 
 import {
   createBrowserRouter,
@@ -27,10 +28,16 @@ const root = createBrowserRouter([
     path: "/about",
     element: AboutPage,
     errorElement: ErrorPage,
+  },
+  {
+    path: "/about/:about",
+    element: LogementPage,
+    errorElement: ErrorPage,
   }
-
-
 ]);
+
+
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
