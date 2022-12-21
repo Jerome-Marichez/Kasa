@@ -1,14 +1,16 @@
 
 import Header from "../components/Header/Header";
-import Banner from "../components/Banner/Banner";
+import Carrousel from "../components/Carrousel/Carrousel";
+import data from "../data/Logements.json";
 import Footer from "../components/Footer/Footer";
 
 import "./_pages.scss";
 
+
 export const LogementPage = (
 	<>
 		<Header />
-		<Banner />
+		<Carrousel data={data} />
 		<Footer />
 	</>
 

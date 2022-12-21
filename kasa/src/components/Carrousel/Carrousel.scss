@@ -1,0 +1,77 @@
+@use "../../utils/_mixin.scss" as *;
+
+.carrousel {
+	transition: all 0.3s ease-in-out;
+
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	background-color: grey;
+	border-radius: 10px;
+	height: 255px;
+
+	margin-top: 30px;
+	margin-bottom: 15px;
+
+
+	@include for-desktop {
+		border-radius: 25px;
+		height: 415px;
+		margin-bottom: 30px;
+	}
+
+
+	.container-select {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 100%;
+		justify-content: space-between;
+
+
+		%SelectIcon {
+			cursor: pointer;
+			width: 11.67px;
+			height: 19.8px;
+			margin-left: 6px;
+			margin-right: 6px;
+
+			@include for-desktop {
+				width: 46px;
+				height: 79px;
+				margin-left: 24px;
+				margin-right: 24px;
+			}
+
+
+		}
+
+		.previous {
+			@extend %SelectIcon;
+			content: url(arrow-left.svg);
+		}
+
+		.next {
+			@extend %SelectIcon;
+			content: url(arrow-right.svg);
+		}
+	}
+
+
+	p {
+		display: none;
+
+		@include for-desktop {
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 500;
+			color: white;
+			position: absolute;
+			display: inline-block;
+			font-size: 25px;
+			bottom: 25px;
+			left: 50%;
+		}
+
+	}
+}

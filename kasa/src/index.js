@@ -30,7 +30,7 @@ const root = createBrowserRouter([
     errorElement: ErrorPage,
   },
   {
-    path: "/about/:about",
+    path: "/logement",
     element: LogementPage,
     errorElement: ErrorPage,
   }
