@@ -12,7 +12,7 @@ export const HomePage = (
 		<Header />
 		<Banner title="Chez vous, partout et ailleurs" />
 		<div className="container-thumbs">
-			{data.map(data => <Thumb id={data.id} title={data.title} img={data.cover} />)}
+			{data.map(data => <Thumb key={data.id.toString()}  id={data.id} title={data.title} img={data.cover} />)}
 		</div>
 
 		<Footer />
