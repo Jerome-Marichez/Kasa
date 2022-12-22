@@ -1,6 +1,5 @@
 import "./Carrousel.scss";
 import React, { useState } from "react";
-import getData from "../../utils/getData";
 
 export default function Carrousel({ pictures }) {
 
