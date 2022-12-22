@@ -1,10 +1,12 @@
 import "./Carrousel.scss";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import getData from "../../utils/getData";
 
 export default function Carrousel({ pictures }) {
 
-	
+
 	const [index, setIndex] = useState(0);
+
 
 	function changeSlide(index) {
 		if (index < pictures.length && index >= 0) {

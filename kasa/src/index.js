@@ -21,18 +21,18 @@ import {
 const root = createBrowserRouter([
   {
     path: "/",
-    element: HomePage,
-    errorElement: ErrorPage,
+    element: <HomePage/>,
+    errorElement: <ErrorPage/>,
   },
   {
     path: "/about",
-    element: AboutPage,
-    errorElement: ErrorPage,
+    element: <AboutPage/>,
+    errorElement: <ErrorPage/>,
   },
   {
     path: "/logement",
-    element: LogementPage,
-    errorElement: ErrorPage,
+    element: <LogementPage/>,
+    errorElement: <ErrorPage/>,
   }
 ]);
 
