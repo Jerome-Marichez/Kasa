@@ -13,7 +13,7 @@ export default class getData {
 			const urlString = (window.location.href).toLowerCase();
 			const url = new URL(urlString);
 			this.parameter = parameter;  // The parameter in the url like "id" if url is like "/?id=" 
-			this.parameterValue = url.searchParams.get(parameter); // The value of the paremeter like ok in "/?id=ok"
+			this.parameterValue = url.searchParams.get(parameter); // The value of the parameter like ok in "/?id=ok"
 		}
 	}
 
@@ -39,7 +39,7 @@ export default class getData {
 	getParameterValue() {
 		return this.parameterValue;
 	}
-	
+
 	getPictures() {
 		if (this.returnData) { return this.returnData.pictures; }
 	}
