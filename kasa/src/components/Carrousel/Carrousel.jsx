@@ -1,14 +1,9 @@
 import "./Carrousel.scss";
 import React, { useState, useEffect } from "react";
-import getDataById from "../../utils/getData.js";
 
-export default function Carrousel({ data }) {
+export default function Carrousel({ pictures }) {
 
-
-	const pictures = getDataById(data).pictures; // Return all pictures Data from specific ID
-
-
-
+	
 	const [index, setIndex] = useState(0);
 
 	function changeSlide(index) {

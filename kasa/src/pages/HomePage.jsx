@@ -3,16 +3,18 @@ import Header from "../components/Header/Header";
 import Banner from "../components/Banner/Banner";
 import Footer from "../components/Footer/Footer";
 import Thumb from "../components/Thumb/Thumb";
-import data from "../data/Logements.json";
+import getData from "../utils/getData";
+
 import "./_pages.scss";
 
+const data = new getData().all(); 
 
 export const HomePage = (
 	<>
 		<Header />
 		<Banner title="Chez vous, partout et ailleurs" />
 		<div className="container-thumbs">
-			{data.map(data => <Thumb key={data.id.toString()}  id={data.id} title={data.title} img={data.cover} />)}
+			{data.map(data => <Thumb key={data.id.toString()} id={data.id} title={data.title} img={data.cover} />)}
 		</div>
 
 		<Footer />
