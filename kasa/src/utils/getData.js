@@ -22,6 +22,7 @@ export default class getData {
 	}
 
 	byParameterURL() {
+		// Method for return the specific object to be found depend of parameter put in constructor
 		const getDataById = this.data.find((data) => {
 			if (data[this.parameter] == this.parameterValue) {
 				return data;
