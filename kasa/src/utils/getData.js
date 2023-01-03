@@ -45,6 +45,14 @@ export default class getData {
 		if (this.returnData) { return this.returnData.pictures; }
 	}
 
+	getDescription() {
+		if (this.returnData) { return this.returnData.description; }
+	}
+
+	getEquipments() {
+		if (this.returnData) { return this.returnData.equipments }
+	}
+
 
 }
 

@@ -60,16 +60,23 @@
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 400;
 		font-size: 12px;
+		line-height: 18px;
 
 		color: #FF6060;
 
 		@include for-desktop {
-
+			line-height: 25px;
 			font-size: 18px;
+
+		}
+
+		li {
+			list-style: none;
 		}
 	}
 
 	.show {
+
 		display: block;
 	}
 

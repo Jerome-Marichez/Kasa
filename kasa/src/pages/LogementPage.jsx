@@ -17,29 +17,37 @@ export function LogementPage() {
 	let parameterValue = data.getParameterValue()
 
 	const [pictures, setPictures] = useState(0);
+	const [description, setDescription] = useState(0);
+	const [equipments, setEquipments] = useState(0);
 
 
 	useEffect(() => {
+
 		data = data.byParameterURL();
-		let picturesList = data.getPictures();
 
 		/** Preload Pictures (force caching) */
-		picturesList.forEach((picture) => {
+		let picturesData = data.getPictures();
+		picturesData.forEach((picture) => {
 			new Image().src = picture
 		});
 		/** End Preload Pictures */
-		
-		setPictures(picturesList);
+
+		setPictures(data.getPictures());
+		setDescription(data.getDescription());
+		setEquipments(data.getEquipments());
+
 	}, [parameterValue])
+
 
 	return (
 		<>
 			<Header />
 			<Carrousel pictures={pictures} />
 			<div className="container-dropdown">
-				<Dropdown key="1" title="Fiabilité" texte="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
+				<Dropdown key="1" title="Description" texte={description} />
+				<Dropdown key="2" title="Équipements" texte={equipments} />
 			</div>
-				<Dropdown key="2" title="Respect" texte="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
+
 			<Footer />
 		</>
 
