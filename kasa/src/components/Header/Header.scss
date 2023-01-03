@@ -39,8 +39,7 @@
 				}
 
 				a {
-					font-family: 'Montserrat', sans-serif;
-					font-weight: 500;
+					@extend %font;
 					font-size: 12px;
 
 					color: #FF6060;

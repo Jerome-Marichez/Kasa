@@ -28,7 +28,7 @@
 	}
 
 	p {
-		font-family: 'Montserrat', sans-serif;
+		@extend %font;
 		font-size: 12px;
 
 		@include for-desktop {

@@ -12,7 +12,7 @@
 
 	h1,
 	p {
-		font-family: 'Montserrat', sans-serif;
+		@extend %font;
 		color: #FF6060
 	}
 

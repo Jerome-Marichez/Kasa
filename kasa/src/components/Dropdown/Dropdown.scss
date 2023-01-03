@@ -21,10 +21,9 @@
 		}
 
 		.title {
-			font-family: 'Montserrat', sans-serif;
+			@extend %font;
 			color: white;
 			margin-left: 15px;
-			font-weight: 500;
 			font-size: 13px;
 
 			@include for-desktop {
@@ -56,8 +55,7 @@
 		display: none;
 		padding: 15px;
 		border-radius: 5px;
-		background-color: #F6F6F6;
-		font-family: 'Montserrat', sans-serif;
+		@extend %font;
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 18px;

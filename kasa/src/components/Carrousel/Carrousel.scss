@@ -61,10 +61,10 @@
 
 	p {
 		display: none;
+		@extend %font;
 
 		@include for-desktop {
-			font-family: 'Montserrat', sans-serif;
-			font-weight: 500;
+
 			color: white;
 			position: absolute;
 			display: inline-block;

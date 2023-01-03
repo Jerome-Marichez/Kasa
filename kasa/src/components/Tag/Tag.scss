@@ -4,7 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	
+
 	width: 84px;
 	height: 18px;
 	border-radius: 5px;
@@ -19,8 +19,7 @@
 	p {
 
 		color: white;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: 500;
+		@extend %font;
 		align-items: center;
 		font-size: 10px;
 

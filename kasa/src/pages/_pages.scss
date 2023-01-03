@@ -11,6 +11,7 @@
 	margin-bottom: 5px;
 	font-size: 18px;
 	@extend %font;
+	color: #FF6060;
 
 	@include for-desktop {
 		margin-top: 30px;
@@ -22,7 +23,7 @@
 .title-localisation {
 	margin-bottom: 12px;
 	@extend %font;
-
+	color: #FF6060;
 	font-size: 14px;
 
 	@include for-desktop {
