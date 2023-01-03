@@ -1,15 +1,24 @@
 @use "../utils/_mixin.scss" as *;
 
 /* GLOBAL PAGE STYLES */
+.container-tag {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	margin-bottom: 16px;
+
+	@include for-desktop {
+		margin-bottom: 24px;
+	}
+}
 
 .container-dropdown {
 	display: flex;
 	flex-direction: column;
-	
-	@include for-desktop { 
+
+	@include for-desktop {
 		flex-direction: row;
 		gap: 76px
-		
 	}
 }
 
