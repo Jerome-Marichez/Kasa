@@ -44,10 +44,11 @@
 
 					color: #FF6060;
 					text-decoration: none;
+					text-transform: uppercase;
 
 					@include for-desktop {
 						font-size: 24px;
-
+						text-transform: none;
 					}
 				}
 
