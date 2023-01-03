@@ -48,12 +48,26 @@ export function LogementPage() {
 			<Header />
 			<Carrousel pictures={pictures} />
 
-			<div className="container-tag">
-				<Tag title="title" />
-				<Tag title="d" />
-				<Tag title="b" />
+
+			<div className="container-logement">
+				<div className="bloc-1">
+					<h1 className="title-logement">Cozy loft on the Canal Saint-Martin</h1>
+					<h2 className="title-localisation">Paris, Ile-de-France</h2>
+
+					<div className="container-tag">
+						<Tag title="title" />
+						<Tag title="d" />
+						<Tag title="b" />
+					</div>
+				</div>
+
+
+				<div className="bloc-2">
+					<div className="author"></div>
+					<div className="star"></div>
+				</div>
 			</div>
-			
+
 			<div className="container-dropdown">
 				<Dropdown key="1" title="Description" texte={description} />
 				<Dropdown key="2" title="Équipements" texte={equipments} />

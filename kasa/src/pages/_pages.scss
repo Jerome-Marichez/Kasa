@@ -1,6 +1,36 @@
 @use "../utils/_mixin.scss" as *;
 
 /* GLOBAL PAGE STYLES */
+
+
+.container-logement {}
+
+
+.title-logement {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	@extend %font;
+
+	@include for-desktop {
+		margin-top: 30px;
+		margin-bottom: 10px;
+		font-size: 36px;
+	}
+}
+
+.title-localisation {
+	margin-bottom: 12px;
+	@extend %font;
+
+	font-size: 14px;
+
+	@include for-desktop {
+		margin-bottom: 22px;
+		font-size: 18px;
+	}
+}
+
 .container-tag {
 	display: flex;
 	flex-direction: row;
