@@ -53,6 +53,9 @@ export default class getData {
 		if (this.returnData) { return this.returnData.equipments }
 	}
 
+	getTags() {
+		if (this.returnData) { return this.returnData.tags}
+	}
 
 }
 

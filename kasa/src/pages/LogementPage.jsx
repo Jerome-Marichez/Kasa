@@ -20,9 +20,7 @@ export function LogementPage() {
 	const [pictures, setPictures] = useState(0);
 	const [description, setDescription] = useState(0);
 	const [equipments, setEquipments] = useState(0);
-
-
-	const title = "test";
+	const [tags, setTags] = useState([]);
 
 
 	useEffect(() => {
@@ -39,6 +37,7 @@ export function LogementPage() {
 		setPictures(data.getPictures());
 		setDescription(data.getDescription());
 		setEquipments(data.getEquipments());
+		setTags(data.getTags());
 
 	}, [parameterValue])
 
@@ -55,9 +54,7 @@ export function LogementPage() {
 					<h2 className="title-localisation">Paris, Ile-de-France</h2>
 
 					<div className="container-tag">
-						<Tag title="title" />
-						<Tag title="d" />
-						<Tag title="b" />
+						{tags.map(tag => <Tag key={tag} title={tag} />)}
 					</div>
 				</div>
 
