@@ -17,15 +17,9 @@ export default function Dropdown({ title, texte }) {
 			</div>
 
 
-			{isMultiTexte ?
-				<div className={`texte ${isOpen ? `show` : ``}`}>
-					{texte.map(data => <li key={data.toString()}>{data}</li>)}
-				</div>
-				:
-				<div className={`texte ${isOpen ? `show` : ``}`}>
-					{texte}
-				</div>
-			}
-		</div>
+			<div className={`texte ${isOpen ? `show` : ``}`}>
+				{isMultiTexte ? texte.map(data => <li key={data.toString()}>{data}</li>) : texte}
+			</div>
+		</div >
 	)
 }
