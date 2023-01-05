@@ -14,21 +14,22 @@ import { useEffect, useState } from "react";
 
 export function LogementPage() {
 
-
 	let data = new getData("id");
 	let parameterValue = data.getParameterValue();
 
 	const [pictures, setPictures] = useState(0);
 	const [texte, setTexte] = useState(["Titre"], ["Localisation"]);
-	
+
+
 	const [tags, setTags] = useState([]);
 	const [rate, setRate] = useState(0);
-	
+
 	const [dropdown, setDropdown] = useState(["Description"], ["Equipments"]);
 
+	
 	useEffect(() => {
 
-		
+
 		data = data.byParameterURL();
 
 		/** Preload Pictures (force caching) */
@@ -39,14 +40,14 @@ export function LogementPage() {
 		/** End Preload Pictures */
 
 		setPictures(data.getPictures());
-		setTexte([data.getTitle(),data.getLocation()]); 
-		
+		setTexte([data.getTitle(), data.getLocation()]);
+
 		setTags(data.getTags());
 		setRate(data.getRate());
 
-		setDropdown([data.getDescription(),data.getEquipments()]);
-		
-	
+		setDropdown([data.getDescription(), data.getEquipments()]);
+
+
 	}, [parameterValue])
 
 
