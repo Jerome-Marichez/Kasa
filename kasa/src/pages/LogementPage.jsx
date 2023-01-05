@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 import Dropdown from "../components/Dropdown/Dropdown";
 import Stars from "../components/Stars/Stars";
 import Tag from "../components/Tag/Tag";
+import Author from "../components/Author/Author";
 import "./_pages.scss";
 import getData from "../utils/getData";
 import { useEffect, useState } from "react";
@@ -23,10 +24,11 @@ export function LogementPage() {
 
 	const [tags, setTags] = useState([]);
 	const [rate, setRate] = useState(0);
+	const [author, setAuthor] = useState(["Title"], ["Picture"]);
 
 	const [dropdown, setDropdown] = useState(["Description"], ["Equipments"]);
 
-	
+
 	useEffect(() => {
 
 
@@ -42,6 +44,9 @@ export function LogementPage() {
 		setPictures(data.getPictures());
 		setTexte([data.getTitle(), data.getLocation()]);
 
+		console.log(data.getAuthorTitle());
+
+		setAuthor([data.getAuthorTitle(), data.getAuthorImg()]);
 		setTags(data.getTags());
 		setRate(data.getRate());
 
@@ -70,7 +75,7 @@ export function LogementPage() {
 
 				<div className="bloc-2">
 					<Stars rate={rate} maxRate="5" />
-					<div className="author"></div>
+					<Author title={author[0]} picture={author[1]} />
 				</div>
 			</div>
 

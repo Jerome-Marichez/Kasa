@@ -1,0 +1,38 @@
+@use "../../utils/mixin" as *;
+
+.author {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+
+	h3 {
+		max-width: 70px;
+		line-height: 17px;
+		text-align: right;
+		word-wrap: break-all;
+		@extend %font;
+		color: #FF6060;
+		font-size: 12px;
+		align-items: self;
+
+		@include for-desktop {
+			line-height: 25px;
+			max-width: 90px;
+			font-size: 18px;
+		}
+	}
+
+	.avatar {
+		border-radius: 40px;
+		background-size: contain;
+		background-color: #C4C4C4;
+		width: 32px;
+		height: 32px;
+
+		@include for-desktop {
+			width: 64px;
+			height: 64px;
+		}
+	}
+}

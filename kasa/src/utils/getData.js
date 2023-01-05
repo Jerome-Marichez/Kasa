@@ -52,9 +52,13 @@ export default class getData {
 	getRate() { if (this.returnData) { return this.returnData.rating; } }
 
 	getTitle() { if (this.returnData) { return this.returnData.title; } }
-	
+
 	getLocation() { if (this.returnData) { return this.returnData.location; } }
-	
+
+	getAuthorTitle() { if (this.returnData) { return this.returnData.host.name; } }
+
+	getAuthorImg() { if (this.returnData) { return this.returnData.host.picture; } }
+
 }
 
 
