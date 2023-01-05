@@ -2,6 +2,7 @@ import Header from "../components/Header/Header";
 import Carrousel from "../components/Carrousel/Carrousel";
 import Footer from "../components/Footer/Footer";
 import Dropdown from "../components/Dropdown/Dropdown";
+import Stars from "../components/Stars/Stars";
 import Tag from "../components/Tag/Tag";
 import "./_pages.scss";
 import getData from "../utils/getData";
@@ -21,10 +22,11 @@ export function LogementPage() {
 	const [description, setDescription] = useState(0);
 	const [equipments, setEquipments] = useState(0);
 	const [tags, setTags] = useState([]);
-
+	const [rate, setRate] = useState(0);
 
 	useEffect(() => {
 
+		
 		data = data.byParameterURL();
 
 		/** Preload Pictures (force caching) */
@@ -38,6 +40,7 @@ export function LogementPage() {
 		setDescription(data.getDescription());
 		setEquipments(data.getEquipments());
 		setTags(data.getTags());
+		setRate(data.getRate());
 
 	}, [parameterValue])
 
@@ -60,8 +63,8 @@ export function LogementPage() {
 
 
 				<div className="bloc-2">
+					<Stars rate={rate} maxRate="5" />
 					<div className="author"></div>
-					<div className="star"></div>
 				</div>
 			</div>
 

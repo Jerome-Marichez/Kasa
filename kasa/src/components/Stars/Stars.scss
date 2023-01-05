@@ -1,0 +1,33 @@
+@use "../../utils/_mixin.scss" as *;
+
+.stars-container {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+
+	@include for-desktop {
+		gap: 10px;
+	}
+
+	.star {
+		content: url(Star.svg);
+		height: 15px;
+		width: 15px;
+
+		@include for-desktop {
+			height: 30px;
+			width: 30px
+		}
+
+		// &:hover {
+		// 	cursor: pointer;
+		// 	filter: brightness(0) saturate(100%) invert(47%) sepia(51%) saturate(758%) hue-rotate(313deg) brightness(101%) contrast(100%);
+		// }
+	}
+
+
+	.red {
+		filter: brightness(0) saturate(100%) invert(47%) sepia(51%) saturate(758%) hue-rotate(313deg) brightness(101%) contrast(100%);
+	}
+
+}

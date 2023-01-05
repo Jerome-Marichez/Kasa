@@ -41,21 +41,16 @@ export default class getData {
 		return this.parameterValue;
 	}
 
-	getPictures() {
-		if (this.returnData) { return this.returnData.pictures; }
-	}
+	getPictures() { if (this.returnData) { return this.returnData.pictures; }}
 
-	getDescription() {
-		if (this.returnData) { return this.returnData.description; }
-	}
+	getDescription() { if (this.returnData) { return this.returnData.description; } }
 
-	getEquipments() {
-		if (this.returnData) { return this.returnData.equipments }
-	}
+	getEquipments() { if (this.returnData) { return this.returnData.equipments } }
 
-	getTags() {
-		if (this.returnData) { return this.returnData.tags}
-	}
+	getTags() { if (this.returnData) { return this.returnData.tags } }
+
+	getRate() { if (this.returnData) { return this.returnData.rating } }
+
 
 }
 
