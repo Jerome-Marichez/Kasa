@@ -15,14 +15,16 @@ import { useEffect, useState } from "react";
 export function LogementPage() {
 
 
-	let data = new getData("id")
-	let parameterValue = data.getParameterValue()
+	let data = new getData("id");
+	let parameterValue = data.getParameterValue();
 
 	const [pictures, setPictures] = useState(0);
-	const [description, setDescription] = useState(0);
-	const [equipments, setEquipments] = useState(0);
+	const [texte, setTexte] = useState(["Titre"], ["Localisation"]);
+	
 	const [tags, setTags] = useState([]);
 	const [rate, setRate] = useState(0);
+	
+	const [dropdown, setDropdown] = useState(["Description"], ["Equipments"]);
 
 	useEffect(() => {
 
@@ -37,11 +39,14 @@ export function LogementPage() {
 		/** End Preload Pictures */
 
 		setPictures(data.getPictures());
-		setDescription(data.getDescription());
-		setEquipments(data.getEquipments());
+		setTexte([data.getTitle(),data.getLocation()]); 
+		
 		setTags(data.getTags());
 		setRate(data.getRate());
 
+		setDropdown([data.getDescription(),data.getEquipments()]);
+		
+	
 	}, [parameterValue])
 
 
@@ -53,8 +58,8 @@ export function LogementPage() {
 
 			<div className="container-logement">
 				<div className="bloc-1">
-					<h1 className="title-logement">Cozy loft on the Canal Saint-Martin</h1>
-					<h2 className="title-localisation">Paris, Ile-de-France</h2>
+					<h1 className="title-logement">{texte[0]}</h1>
+					<h2 className="title-localisation">{texte[1]}</h2>
 
 					<div className="container-tag">
 						{tags.map(tag => <Tag key={tag} title={tag} />)}
@@ -69,8 +74,8 @@ export function LogementPage() {
 			</div>
 
 			<div className="container-dropdown">
-				<Dropdown key="1" title="Description" texte={description} />
-				<Dropdown key="2" title="Équipements" texte={equipments} />
+				<Dropdown key="1" title="Description" texte={dropdown[0]} />
+				<Dropdown key="2" title="Équipements" texte={dropdown[1]} />
 			</div>
 
 			<Footer />
