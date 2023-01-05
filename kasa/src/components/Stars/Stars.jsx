@@ -26,7 +26,7 @@ export default function Stars({ rate, maxRate }) {
 	
 	
 	return (
-		<div className="stars-container">
+		<div className="stars">
 			{starsArray.map((star,index) => <div key={index} className={star}></div>)}
 		</div>
 	)
