@@ -3,7 +3,27 @@
 /* GLOBAL PAGE STYLES */
 
 
-.container-logement {}
+.container-logement {
+	@include for-desktop {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.bloc-2 {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+		margin-top: 16px;
+
+		@include for-desktop {
+			justify-content: space-around;
+			flex-direction: column-reverse;
+		}
+	}
+
+}
 
 
 .title-logement {
@@ -36,7 +56,6 @@
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
-	margin-bottom: 16px;
 
 	@include for-desktop {
 		margin-bottom: 24px;
