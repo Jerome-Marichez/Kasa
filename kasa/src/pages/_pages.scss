@@ -1,4 +1,4 @@
-@use "../utils/_mixin.scss" as *;
+@use "../utils/_utils.scss" as *;
 
 /* GLOBAL PAGE STYLES */
 
@@ -14,8 +14,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		margin-bottom: 16px;
-		margin-top: 16px;
+		@include margin-top-bottom(16px);
 
 		@include for-desktop {
 			justify-content: space-around;
@@ -30,8 +29,8 @@
 	margin-top: 15px;
 	margin-bottom: 5px;
 	font-size: 18px;
-	@extend %font;
-	color: #FF6060;
+	@extend %fontType;
+	color: var(--colorPrimary);
 
 	@include for-desktop {
 		margin-top: 30px;
@@ -42,8 +41,8 @@
 
 .title-localisation {
 	margin-bottom: 12px;
-	@extend %font;
-	color: #FF6060;
+	@extend %fontType;
+	color: var(--colorPrimary);
 	font-size: 14px;
 
 	@include for-desktop {
@@ -93,7 +92,7 @@
 			grid-template-columns: repeat(3, 1fr);
 		}
 
-		background: #F7F7F7;
+		background: var(--bgColorContainer);
 		border-radius: 25px;
 		min-height: 150px;
 		gap: 60px;

@@ -1,8 +1,8 @@
-@use "../../utils/_mixin.scss" as *;
+@use "../../utils/_utils.scss" as *;
 
 
 .footer {
-	background-color: black;
+	background-color: var(--colorThird);
 
 	width: 100%;
 	min-height: 209px;
@@ -28,7 +28,7 @@
 	}
 
 	p {
-		@extend %font;
+		@extend %fontType;
 		font-size: 12px;
 
 		@include for-desktop {

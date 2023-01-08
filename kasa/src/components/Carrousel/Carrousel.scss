@@ -1,4 +1,4 @@
-@use "../../utils/_mixin.scss" as *;
+@use "../../utils/_utils.scss" as *;
 
 .carrousel {
 	transition: all 0.3s ease-in-out;
@@ -38,6 +38,14 @@
 			margin-left: 6px;
 			margin-right: 6px;
 
+			@media (prefers-color-scheme: dark) {
+				filter: brightness(0) saturate(100%);
+			}
+
+			html[data-theme='dark'] {
+				filter: brightness(0) saturate(100%);
+			}
+
 			@include for-desktop {
 				width: 46px;
 				height: 79px;
@@ -62,11 +70,11 @@
 
 	p {
 		display: none;
-		@extend %font;
+		@extend %fontType;
 
 		@include for-desktop {
 
-			color: white;
+			color: var(--ColorSecondary);
 			position: absolute;
 			display: inline-block;
 			font-size: 25px;

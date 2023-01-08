@@ -1,4 +1,4 @@
-@use "../../utils/mixin" as *;
+@use "../../utils/_utils.scss" as *;
 
 .author {
 	display: flex;
@@ -11,8 +11,8 @@
 		line-height: 17px;
 		text-align: right;
 		word-wrap: break-all;
-		@extend %font;
-		color: #FF6060;
+		@extend %fontType;
+		color: var(--colorPrimary);
 		font-size: 12px;
 		align-items: self;
 

@@ -1,14 +1,14 @@
-@use "../../utils/_mixin.scss" as *;
+@use "../../utils/_utils.scss" as *;
 
 .thumb {
 
 	background-size: cover;
 	cursor: pointer;
 	border-radius: 10px;
-	background-color: rgb(250, 125, 125);
+	background-color: var(--colorPrimary);
 	min-height: 255px;
 
-	
+
 	max-height: 255px;
 
 	@include for-desktop {
@@ -33,6 +33,14 @@
 		transition: all 0.3s ease-in-out;
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 
+		@media (prefers-color-scheme: dark) {
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(238, 237, 237, 0.5) 100%);
+		}
+
+		html[data-theme='dark'] {
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(238, 237, 237, 0.5) 100%);
+		}
+		
 
 	}
 
@@ -44,8 +52,8 @@
 
 	h3 {
 		z-index: 2;
-		color: white;
-		font-family: "Montserrat", sans-serif;
+		color: var(--colorSecondary);
+		font-family: var(--fontFamily);
 		font-weight: 500;
 		font-size: 18px;
 		position: absolute;
@@ -57,5 +65,5 @@
 
 	}
 
-	
+
 }

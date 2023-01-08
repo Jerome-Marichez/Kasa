@@ -1,5 +1,4 @@
-import "./global.scss"; // Import SCSS used by the global project 
-
+import "./utils/_utils.scss"; // Import SCSS used by the global project 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 

@@ -1,4 +1,4 @@
-@use "../../utils/_mixin.scss" as *;
+@use "../../utils/_utils.scss" as *;
 
 .error-page {
 	display: flex;
@@ -12,8 +12,8 @@
 
 	h1,
 	p {
-		@extend %font;
-		color: #FF6060
+		@extend %fontType;
+		color: var(--colorPrimary);
 	}
 
 	h1 {
@@ -47,7 +47,7 @@
 			font-size: 18px;
 		}
 
-		color: #FF6060;
+		color: var(--colorPrimary);
 
 	}
 

@@ -1,4 +1,4 @@
-@use "../../utils/_mixin.scss" as *;
+@use "../../utils/_utils.scss" as *;
 
 
 .dropdown {
@@ -11,7 +11,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background-color: #FF6060;
+		background-color: var(--colorPrimary);
 		border-radius: 5px;
 
 		height: 30px;
@@ -21,8 +21,8 @@
 		}
 
 		.title {
-			@extend %font;
-			color: white;
+			@extend %fontType;
+			color: var(--colorSecondary);
 			margin-left: 15px;
 			font-size: 13px;
 
@@ -34,11 +34,21 @@
 		.arrow {
 			cursor: pointer;
 
-			color: white;
+			color: var(--colorSecondary);
 			margin-right: 15px;
 			content: url(Vector.svg);
 
 			width: 13px;
+
+			@media (prefers-color-scheme: dark) {
+				filter: brightness(0) saturate(100%);
+			}
+
+			html[data-theme='dark'] {
+				filter: brightness(0) saturate(100%);
+			}
+
+			
 
 			@include for-desktop {
 				width: 20px;
@@ -55,12 +65,13 @@
 		display: none;
 		padding: 15px;
 		border-radius: 5px;
-		@extend %font;
+		@extend %fontType;
 		font-weight: 400;
 		font-size: 12px;
 		line-height: 18px;
-		background-color: #F7F7F7;
-		color: #FF6060;
+
+		background-color: var(--bgColorContainer);
+		color: var(--colorPrimary);
 
 		@include for-desktop {
 			line-height: 25px;
@@ -74,7 +85,6 @@
 	}
 
 	.show {
-
 		display: block;
 	}
 

@@ -1,4 +1,4 @@
-@use "../../utils/_mixin.scss" as *;
+@use "../../utils/_utils.scss" as *;
 
 .tag {
 	display: flex;
@@ -6,7 +6,7 @@
 	justify-content: space-around;
 	min-width: 84px;
 	border-radius: 5px;
-	background-color: #FF6060;
+	background-color: var(--colorPrimary);
 
 	@include for-desktop {
 		min-width: 115px;
@@ -16,8 +16,8 @@
 	p {
 
 		padding: 4px;
-		color: white;
-		@extend %font;
+		color: var(--colorSecondary);
+		@extend %fontType;
 		align-items: center;
 		font-size: 10px;
 

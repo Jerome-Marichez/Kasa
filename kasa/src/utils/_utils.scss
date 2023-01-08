@@ -1,0 +1,70 @@
+:root,
+html[data-theme='light'] {
+	--fontFamily: 'Montserrat', sans-serif;
+	--colorPrimary: #FF6060;
+	--colorSecondary: white;
+	--colorThird: rgb(0, 0, 0);
+	--bgColorContainer: #F7F7F7;
+}
+
+@media (prefers-color-scheme: dark) {
+
+	:root,
+	html[data-theme='dark'] {
+		--colorSecondary: rgb(54, 54, 54);
+		--colorThird: rgb(0, 0, 0);
+		--bgColorContainer: rgb(85, 85, 85);
+	}
+}
+
+%fontType {
+	font-family: var(--fontFamily);
+	font-weight: 500;
+}
+
+@mixin for-desktop {
+	@media (min-width: 599px) and (min-height: 500px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-largescreen {
+	@media (min-width: 1399px) {
+		@content;
+	}
+}
+
+@mixin margin-top-bottom($value) {
+	margin-top: $value;
+	margin-bottom: $value;
+}
+
+html,
+* {
+	@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.3s;
+}
+
+
+body {
+	background-color: var(--colorSecondary);
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+
+	@include for-desktop {
+		padding-left: 7%;
+		padding-right: 7%;
+		padding-top: 57px;
+	}
+
+	@include for-desktop-largescreen {
+		padding-left: 14%;
+		padding-right: 14%;
+		padding-top: 57px;
+	}
+}
