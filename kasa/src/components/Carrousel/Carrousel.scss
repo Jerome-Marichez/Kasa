@@ -6,19 +6,20 @@
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 	position: relative;
 	background-color: #aaa9a9;
 	border-radius: 10px;
 	height: 255px;
 
 	margin-top: 30px;
-	
+
 
 
 	@include for-desktop {
 		border-radius: 25px;
 		height: 415px;
-		
+
 	}
 
 
