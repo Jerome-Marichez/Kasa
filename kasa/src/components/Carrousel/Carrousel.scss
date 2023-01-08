@@ -65,10 +65,9 @@
 	p {
 		display: none;
 		@extend %fontType;
+		color: var(--colorSecondary);
 
 		@include for-desktop {
-
-			color: var(--ColorSecondary);
 			position: absolute;
 			display: inline-block;
 			font-size: 25px;

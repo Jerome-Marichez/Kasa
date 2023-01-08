@@ -10,19 +10,18 @@ html[data-theme='light'] {
 	--thumbShadow: rgba(0, 0, 0, 0.5) 100%;
 }
 
-@media (prefers-color-scheme: dark) {
 
-	:root,
-	html[data-theme='dark'] {
-		
-		--colorSecondary: rgb(54, 54, 54);
-		--colorThird: rgb(0, 0, 0);
-		--bgColorContainer: rgb(85, 85, 85);
-		--bannerOpacity: 0.1;
-		--svgFillColor: brightness(0) saturate(100%);
-		--thumbShadow: rgba(238, 237, 237, 0.5) 100%;
-	}
+
+
+html[data-theme='dark'] {
+	--colorSecondary: rgb(54, 54, 54);
+	--colorThird: rgb(0, 0, 0);
+	--bgColorContainer: rgb(85, 85, 85);
+	--bannerOpacity: 0.1;
+	--svgFillColor: brightness(0) saturate(100%);
+	--thumbShadow: rgba(240, 236, 236, 0.623) 100%;
 }
+
 
 %fontType {
 	font-family: var(--fontFamily);
