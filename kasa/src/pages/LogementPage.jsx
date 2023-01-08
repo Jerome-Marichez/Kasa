@@ -14,6 +14,8 @@ import { useEffect, useRef, useState } from "react";
 
 
 export function LogementPage() {
+	/* Scroll to the top to avoid unwanted effect*/
+	window.scrollTo(0, 0)
 
 	/* load data though ?id= */ 
 	let data = new getData("id");
