@@ -6,8 +6,8 @@ import Stars from "../components/Stars/Stars";
 import Tag from "../components/Tag/Tag";
 import Author from "../components/Author/Author";
 import "./_pages.scss";
-import getData from "../utils/getData";
-import { useEffect, useState } from "react";
+import getData from "../utils/getData.js";
+import { useEffect, useRef, useState } from "react";
 
 
 
@@ -15,52 +15,28 @@ import { useEffect, useState } from "react";
 
 export function LogementPage() {
 
+	/* load data though ?id= */ 
 	let data = new getData("id");
-	let parameterValue = data.getParameterValue();
+	data = data.byParameterURL();
 
-	const [pictures, setPictures] = useState(0);
-	const [texte, setTexte] = useState(["Titre"], ["Localisation"]);
+	let texte = [data.getTitle(), data.getLocation()];
+	let author = [data.getAuthorTitle(), data.getAuthorImg()];
+	let tags = data.getTags();
+	let rate = data.getRate();
+	let dropdown = [data.getDescription(), data.getEquipments()];
+	let pictures = data.getPictures();
 
+	/** Preload Pictures (force caching) */
+	pictures.forEach((picture) => {
+		new Image().src = picture
+	});
+	/** End Preload Pictures */
 
-	const [tags, setTags] = useState([]);
-	const [rate, setRate] = useState(0);
-	const [author, setAuthor] = useState(["Title"], ["Picture"]);
-
-	const [dropdown, setDropdown] = useState(["Description"], ["Equipments"]);
-
-
-	useEffect(() => {
-
-
-		data = data.byParameterURL();
-
-		/** Preload Pictures (force caching) */
-		let picturesData = data.getPictures();
-		picturesData.forEach((picture) => {
-			new Image().src = picture
-		});
-		/** End Preload Pictures */
-
-		setPictures(data.getPictures());
-		setTexte([data.getTitle(), data.getLocation()]);
-
-		console.log(data.getAuthorTitle());
-
-		setAuthor([data.getAuthorTitle(), data.getAuthorImg()]);
-		setTags(data.getTags());
-		setRate(data.getRate());
-
-		setDropdown([data.getDescription(), data.getEquipments()]);
-
-
-	}, [parameterValue])
-
-
+	
 	return (
 		<>
 			<Header />
 			<Carrousel pictures={pictures} />
-
 
 			<div className="container-logement">
 				<div className="bloc-1">
