@@ -7,9 +7,7 @@ export default function Footer() {
 		<footer className="footer">
 			<img src={logo} alt="logo"></img>
 			<DarkMode style={{padding: "30"}}/>
-			<p>© 2020 Kasa. All rights reserved</p>
-			
-			
+			<p>© 2023 Kasa. All rights reserved</p>
 		</footer>
 	);
 }
