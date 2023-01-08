@@ -37,14 +37,8 @@
 			height: 19.8px;
 			margin-left: 6px;
 			margin-right: 6px;
+			filter: var(--svgFillColor);
 
-			@media (prefers-color-scheme: dark) {
-				filter: brightness(0) saturate(100%);
-			}
-
-			html[data-theme='dark'] {
-				filter: brightness(0) saturate(100%);
-			}
 
 			@include for-desktop {
 				width: 46px;

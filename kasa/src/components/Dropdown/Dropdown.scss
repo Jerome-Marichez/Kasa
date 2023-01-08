@@ -37,18 +37,11 @@
 			color: var(--colorSecondary);
 			margin-right: 15px;
 			content: url(Vector.svg);
-
 			width: 13px;
+			filter: var(--svgFillColor);
 
-			@media (prefers-color-scheme: dark) {
-				filter: brightness(0) saturate(100%);
-			}
 
-			html[data-theme='dark'] {
-				filter: brightness(0) saturate(100%);
-			}
 
-			
 
 			@include for-desktop {
 				width: 20px;
