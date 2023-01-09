@@ -5,16 +5,18 @@
 	background-color: var(--colorThird);
 
 	width: 100%;
-	min-height: 209px;
-	max-height: 209px;
+	min-height: 250px;
+	max-height: 250px;
 	position: absolute;
 	left: 0;
 
-	margin-top: 200px;
+	margin-top: 100px;
 
 	@include for-desktop {
-		margin-top: 100px;
+		margin-top: 50px;
 	}
+
+
 
 	display: flex;
 	flex-direction: column;
