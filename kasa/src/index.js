@@ -7,7 +7,6 @@ import { AboutPage } from "./pages/AboutPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { LogementPage } from "./pages/LogementPage";
 
-
 import {
   createBrowserRouter,
   RouterProvider,
